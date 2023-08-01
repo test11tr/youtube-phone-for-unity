@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2136f1b0f664fcfbede13584c3fe3c, type: 3}
+  m_Name: Car5
+  m_EditorClassIdentifier: 
+  carIndex: Car5
+  carNumberIndex: 5
+  carName: Horizon
+  carDescription: Long road, nature trips, camping lovers' and explorers' preference
+    for more than 50 years.
+  carPrice: 5000
+  carSpeed: 25
+  carAcceleration: 15
+  carHandling: 80
+  carVisualPrefab: {fileID: 5223052020402516738, guid: 38069acf071684982a8208f5e51d81d8,
+    type: 3}
+  carPlayablePrefab: {fileID: 1302337768377123024, guid: 73e313e9f91dc4bc8bbc22c4924644c8,
+    type: 3}
