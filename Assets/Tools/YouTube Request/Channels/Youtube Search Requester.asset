@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205eef79fef722e4d8ad1d86b6ee90e4, type: 3}
   m_Name: Youtube Search Requester
   m_EditorClassIdentifier: 
-  apiKey: 
+  apiKey: AIzaSyBnZGXgttaVaDY8GY_hxA-Q7TlDAhPWB4Q

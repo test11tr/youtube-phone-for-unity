@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1910d4dca004f78449d99f2403db8768, type: 3}
   m_Name: Youtube Search Request Channel
   m_EditorClassIdentifier: 
-  youtubeSearchRequester: {fileID: 0}
-  maxResults: 10
+  youtubeSearchRequester: {fileID: 11400000, guid: 4731282593771984e9174614727a568d,
+    type: 2}
+  maxResults: 3
