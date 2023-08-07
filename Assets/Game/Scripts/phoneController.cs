@@ -14,6 +14,8 @@ namespace test11
         [SerializeField] private YoutubeRequestReceiver _ytRequestReciever;
         [SerializeField] private YoutubeSearchRequestChannel _ytSearchRequestChannel;
         [SerializeField] private TMPro.TMP_InputField _searchField;
+        public GameObject songPlayerParent;
+        public GameObject songPlayerPage;
 
         void Start()
         {
@@ -54,6 +56,15 @@ namespace test11
 
         public void searchButtonPressed(){
             _ytSearchRequestChannel.GetSearch(_searchField.text);
+        }
+
+        public void clearInstantiatedSongCards(GameObject target){
+            if(target.transform.childCount > 0){
+                for (int i = 0; i < target.transform.childCount; i++)
+                {
+                    Destroy(target.transform.GetChild(i).gameObject);
+                }
+            }
         }
     }
 }

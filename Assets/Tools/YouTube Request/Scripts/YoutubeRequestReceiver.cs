@@ -1,6 +1,7 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using test11;
 
 namespace YoutubeRequestSystem
 {
@@ -10,9 +11,16 @@ namespace YoutubeRequestSystem
 
         [SerializeField] private YoutubeSearchRequestChannel youtubeSearchRequestChannel;
 
+        //
+        public GameObject songCardPrefab;
+        public GameObject songLayoutGroup;
+
         #endregion
 
         #region UNITY METHODS
+
+        private void Start() {
+        }
 
         private void OnEnable()
         {
@@ -47,6 +55,11 @@ namespace YoutubeRequestSystem
                 Debug.Log("Published At: " + item.snippet.publishedAt);
                 Debug.Log("Description: " + item.snippet.description);
                 Debug.Log("Thumbnail URL: " + item.snippet.thumbnails.@default.url);
+
+                GameObject songCard = Instantiate(songCardPrefab, songLayoutGroup.transform.position, Quaternion.identity, songLayoutGroup.transform);
+                songCard.GetComponent<songCardScript>().songName.text = item.snippet.title;
+                songCard.GetComponent<songCardScript>().songID = item.id.videoId;
+                songCard.GetComponent<songCardScript>().imageURL = item.snippet.thumbnails.@default.url;
             }
         }
 

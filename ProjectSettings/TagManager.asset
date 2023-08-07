@@ -17,6 +17,8 @@ TagManager:
   - HUD
   - parkingManager
   - Ground
+  - MainLight
+  - phoneController
   layers:
   - Default
   - TransparentFX
