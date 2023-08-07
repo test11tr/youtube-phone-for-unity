@@ -6,16 +6,23 @@ namespace test11
 {
     public class phoneController : MonoBehaviour
     {
-        // Start is called before the first frame update
+        [SerializeField] private Animator _phoneAnimator;
+
         void Start()
         {
-        
         }
 
         // Update is called once per frame
         void Update()
         {
-        
+            if ((Input.GetKeyDown(KeyCode.P)))
+            {
+                if(_phoneAnimator.GetBool("isClosed") == true){
+                    _phoneAnimator.SetBool("isClosed", false);
+                }else{
+                    _phoneAnimator.SetBool("isClosed", true);
+                }
+            }
         }
     }
 }
