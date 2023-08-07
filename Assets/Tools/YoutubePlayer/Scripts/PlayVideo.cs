@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class PlayVideo : MonoBehaviour
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class YoutubeDl
     {

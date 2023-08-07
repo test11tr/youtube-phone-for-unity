@@ -6,25 +6,35 @@ using TMPro;
 using System;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using YoutubePlayerEditor;
 
 namespace test11
 {
-    public class songPlayCardScript : MonoBehaviour
+    public class songPlayerScript : MonoBehaviour
     {
         public Image songIcon;
         public TMP_Text songName;
-        public Button playButton;
         public string songID; 
         public string imageURL;
+        [SerializeField] private YoutubePlayer _ytPlayer; 
 
         void Start()
         {
             if(imageURL != null){
                 StartCoroutine(DownloadImage(imageURL));
                 StopCoroutine(RefreshURLCoroutine());
+                _ytPlayer.youtubeUrl = songID;
+                PrepareVideo();
             }else{
                 RefreshURL();
             }
+        }
+
+        public async void PrepareVideo()
+        {
+            Debug.Log("Loading video...");
+            await _ytPlayer.PrepareVideoAsync();
+            Debug.Log("Video ready");
         }
 
         [Obsolete]

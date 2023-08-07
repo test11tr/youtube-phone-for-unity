@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine.Networking;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     class RemoteYoutubeDl : IYoutubeDl
     {

@@ -1,4 +1,4 @@
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class YoutubeDlCli
     {

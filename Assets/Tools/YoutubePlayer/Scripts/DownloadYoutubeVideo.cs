@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class DownloadYoutubeVideo : MonoBehaviour
     {

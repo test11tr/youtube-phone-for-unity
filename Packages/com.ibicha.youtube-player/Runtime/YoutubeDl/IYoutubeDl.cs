@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     interface IYoutubeDl
     {

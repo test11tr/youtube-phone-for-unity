@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class SimpleYoutubeVideo : MonoBehaviour
     {

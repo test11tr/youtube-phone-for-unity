@@ -33,7 +33,7 @@ namespace test11
         // Update is called once per frame
         void Update()
         {
-            if ((Input.GetKeyDown(KeyCode.P)))
+            if ((Input.GetKeyDown(KeyCode.UpArrow)))
             {
                 if(_phoneAnimator.GetBool("isClosed") == true){
                     _phoneAnimator.SetBool("isClosed", false);

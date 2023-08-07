@@ -72,9 +72,9 @@ namespace test11
         public void onClickPlayButton(){
             transform.parent.parent.parent.SetActive(false);
             GameObject songPlayCard = Instantiate(songPlayCardPrefab, _phoneController.songPlayerParent.transform.position, Quaternion.identity, _phoneController.songPlayerParent.transform);
-            songPlayCard.GetComponent<songCardScript>().imageURL = imageURL;
-            songPlayCard.GetComponent<songCardScript>().songName.text = songName.text;
-            songPlayCard.GetComponent<songCardScript>().songID = songID;
+            songPlayCard.GetComponent<songPlayerScript>().imageURL = imageURL;
+            songPlayCard.GetComponent<songPlayerScript>().songName.text = songName.text;
+            songPlayCard.GetComponent<songPlayerScript>().songID = songID;
             _phoneController.songPlayerPage.SetActive(true);
         }
     }

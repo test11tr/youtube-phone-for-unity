@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     /// <summary>
     /// Downloads and plays Youtube videos a VideoPlayer component

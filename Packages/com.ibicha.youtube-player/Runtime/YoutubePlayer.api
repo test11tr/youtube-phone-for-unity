@@ -7,7 +7,7 @@ public class YoutubeDownloader
     public static System.Threading.Tasks.Task DownloadAsync(YoutubePlayer.YoutubeVideoMetaData video, string filePath, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 }
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public static class VideoPlayerExtensions
     {

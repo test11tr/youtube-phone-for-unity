@@ -19,6 +19,7 @@ TagManager:
   - Ground
   - MainLight
   - phoneController
+  - youtubeController
   layers:
   - Default
   - TransparentFX

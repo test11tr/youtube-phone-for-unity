@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class PrepareYoutubeVideo : MonoBehaviour
     {

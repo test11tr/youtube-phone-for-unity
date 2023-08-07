@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     public class VideoMetadata : MonoBehaviour
     {

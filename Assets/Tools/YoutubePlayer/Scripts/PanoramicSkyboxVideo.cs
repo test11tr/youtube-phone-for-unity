@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace YoutubePlayer
+namespace YoutubePlayerEditor
 {
     [RequireComponent(typeof(VideoPlayer))]
     public class PanoramicSkyboxVideo : MonoBehaviour
