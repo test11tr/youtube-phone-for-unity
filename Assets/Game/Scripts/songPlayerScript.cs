@@ -7,6 +7,7 @@ using System;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using YoutubePlayerEditor;
+using Unity.VisualScripting;
 
 namespace test11
 {
@@ -16,10 +17,15 @@ namespace test11
         public TMP_Text songName;
         public string songID; 
         public string imageURL;
+        [SerializeField] private phoneController _phoneController;
         [SerializeField] private YoutubePlayer _ytPlayer; 
 
-        void Start()
-        {
+        void Start() {
+            if (_phoneController == null)
+            {
+                _phoneController = GameObject.FindGameObjectWithTag("phoneController").GetComponent<phoneController>();
+            }
+
             if(imageURL != null){
                 StartCoroutine(DownloadImage(imageURL));
                 StopCoroutine(RefreshURLCoroutine());
@@ -32,9 +38,11 @@ namespace test11
 
         public async void PrepareVideo()
         {
+            _phoneController.songLoadingScreen.SetActive(true);
             Debug.Log("Loading video...");
             await _ytPlayer.PrepareVideoAsync();
             Debug.Log("Video ready");
+            _phoneController.songLoadingScreen.SetActive(false);
         }
 
         [Obsolete]

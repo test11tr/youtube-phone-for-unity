@@ -16,6 +16,7 @@ namespace test11
         [SerializeField] private TMPro.TMP_InputField _searchField;
         public GameObject songPlayerParent;
         public GameObject songPlayerPage;
+        public GameObject songLoadingScreen;
 
         void Start()
         {
