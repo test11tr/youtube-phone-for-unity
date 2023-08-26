@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 537010478035705607}
   - component: {fileID: 510413298948090891}
   - component: {fileID: 518454560153573407}
-  - component: {fileID: 2665226673434165474}
   - component: {fileID: 613819592603693258}
   - component: {fileID: 1667276790509027070}
   m_Layer: 0
@@ -86,21 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2665226673434165474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533366916480191821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!136 &613819592603693258
 CapsuleCollider:
   m_ObjectHideFlags: 0

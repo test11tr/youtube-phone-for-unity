@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8174681325764046275}
   - component: {fileID: 8144098439704913235}
   - component: {fileID: 8154137446473719763}
-  - component: {fileID: 6585719044768846589}
   - component: {fileID: 217252347377738292}
   m_Layer: 0
   m_Name: ConcreteWall_1
@@ -85,21 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6585719044768846589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8176316819098966045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!65 &217252347377738292
 BoxCollider:
   m_ObjectHideFlags: 0

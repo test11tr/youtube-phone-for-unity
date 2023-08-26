@@ -29,7 +29,7 @@ namespace test11
             if(_searchField == null){
                 _searchField = GetComponentInChildren<TMPro.TMP_InputField>();
             }
-        }
+        } 
 
         // Update is called once per frame
         void Update()

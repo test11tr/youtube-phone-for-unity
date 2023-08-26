@@ -113,7 +113,6 @@ GameObject:
   - component: {fileID: 1490951832054736224}
   - component: {fileID: 8379869453827098483}
   - component: {fileID: 4055412805203162680}
-  - component: {fileID: 5299672120939855320}
   m_Layer: 0
   m_Name: openingGate
   m_TagString: Untagged
@@ -259,16 +258,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5299672120939855320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105195104249763769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4e35ac5ca0d4685a6c16a941847c3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 0}

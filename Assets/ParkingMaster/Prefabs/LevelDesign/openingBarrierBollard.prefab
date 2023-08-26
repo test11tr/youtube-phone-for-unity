@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3145188307474936556}
   - component: {fileID: 5430881615273562367}
   - component: {fileID: 527660737080992180}
-  - component: {fileID: 6325821517021211294}
   m_Layer: 0
   m_Name: openingBarrierBollard
   m_TagString: Untagged
@@ -86,19 +85,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6325821517021211294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4494771319559979061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed81dd5159dc142009670c62286e50fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
 --- !u!1 &4618591491784214057
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +97,6 @@ GameObject:
   - component: {fileID: 4641623647725616525}
   - component: {fileID: 4633997949173112645}
   - component: {fileID: 836721490281670227}
-  - component: {fileID: 5289314186957312443}
   m_Layer: 0
   m_Name: SM_Prop_Barrier_Bollard_02
   m_TagString: Untagged
@@ -198,21 +183,6 @@ CapsuleCollider:
   m_Height: 0.93
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!114 &5289314186957312443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618591491784214057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!1 &4620623048597940177
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +293,6 @@ GameObject:
   - component: {fileID: 8302018116302063312}
   - component: {fileID: 8302018116302063279}
   - component: {fileID: 6448209836578399595}
-  - component: {fileID: 5635456758917616210}
   m_Layer: 0
   m_Name: SM_Prop_Barrier_Bollard_02
   m_TagString: Untagged
@@ -410,21 +379,6 @@ CapsuleCollider:
   m_Height: 0.93
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!114 &5635456758917616210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8302018116302063277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!1 &8302018116327511699
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +587,6 @@ GameObject:
   - component: {fileID: 8302018116809833174}
   - component: {fileID: 8302018116809833173}
   - component: {fileID: 3939365321166345198}
-  - component: {fileID: 7210225818056821148}
   m_Layer: 0
   m_Name: SM_Prop_Barrier_Bollard_02
   m_TagString: Untagged
@@ -720,21 +673,6 @@ CapsuleCollider:
   m_Height: 0.93
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!114 &7210225818056821148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8302018116809833171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!1 &8302018116837660055
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +881,6 @@ GameObject:
   - component: {fileID: 8302018116971044757}
   - component: {fileID: 8302018116971044756}
   - component: {fileID: 4119103026382012435}
-  - component: {fileID: 8218935949848876002}
   m_Layer: 0
   m_Name: SM_Prop_Barrier_Bollard_02
   m_TagString: Untagged
@@ -1030,21 +967,6 @@ CapsuleCollider:
   m_Height: 0.93
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!114 &8218935949848876002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8302018116971044754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}
 --- !u!1 &8302018117447592586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +979,6 @@ GameObject:
   - component: {fileID: 8302018117447592589}
   - component: {fileID: 8302018117447592588}
   - component: {fileID: 4941393669095449507}
-  - component: {fileID: 330831057610689464}
   m_Layer: 0
   m_Name: SM_Prop_Barrier_Bollard_02
   m_TagString: Untagged
@@ -1144,18 +1065,3 @@ CapsuleCollider:
   m_Height: 0.93
   m_Direction: 1
   m_Center: {x: 0, y: 0.4, z: 0}
---- !u!114 &330831057610689464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8302018117447592586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5163856d7743f44d6bd6288bafa95d2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelManager: {fileID: 0}
-  _parkingManager: {fileID: 0}
-  _carController: {fileID: 0}

@@ -12,6 +12,7 @@ namespace test11
 
         [SerializeField] private EventSystem system;
         [SerializeField] private phoneController _phoneController;
+        [SerializeField] private GameObject _mainPage;
         [SerializeField] private GameObject _searchButton;
         bool allow = true;
 
@@ -34,22 +35,22 @@ namespace test11
                 system = EventSystem.current;
                 if (system == null) return;
             }
+
             GameObject currentObject = system.currentSelectedGameObject;
-            if (currentObject != null)
+            if (currentObject != null )
             {
                 TMP_InputField tmpInput = currentObject.GetComponent<TMP_InputField>();
                 if (tmpInput != null)
                 {
                     if (Input.GetKeyUp(KeyCode.Return))
                     {
-                         Search();
+                        Search();
                     }
                 }
             }
         }
 
         public void Search(){
-            print("pressed enter aq");
             _searchButton.GetComponent<Button>().onClick.Invoke(); 
             allow = true;      
         }
