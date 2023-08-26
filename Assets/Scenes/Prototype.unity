@@ -1721,8 +1721,8 @@ RectTransform:
   - {fileID: 1079138530}
   - {fileID: 1984390350}
   - {fileID: 1176864417}
-  m_Father: {fileID: 1509272944}
-  m_RootOrder: 4
+  m_Father: {fileID: 1748482893}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3366,7 +3366,7 @@ RectTransform:
   - {fileID: 732298460}
   - {fileID: 986238475}
   m_Father: {fileID: 1748482893}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4118,7 +4118,7 @@ MonoBehaviour:
   _ytRequestReciever: {fileID: 0}
   _ytSearchRequestChannel: {fileID: 11400000, guid: b3d9d1e6c464a3a469cec6908ba6c340,
     type: 2}
-  _searchField: {fileID: 0}
+  _searchField: {fileID: 833809389}
   songPlayerParent: {fileID: 348000690}
   songPlayerPage: {fileID: 2069684503}
   songLoadingScreen: {fileID: 612487385}
@@ -9130,7 +9130,6 @@ RectTransform:
   - {fileID: 602612646}
   - {fileID: 1777354195}
   - {fileID: 83300528}
-  - {fileID: 234761515}
   m_Father: {fileID: 1748482893}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10456,6 +10455,7 @@ RectTransform:
   m_Children:
   - {fileID: 1625631852}
   - {fileID: 1509272944}
+  - {fileID: 234761515}
   - {fileID: 2069684504}
   - {fileID: 612487386}
   m_Father: {fileID: 23809006}
@@ -12884,7 +12884,7 @@ RectTransform:
   - {fileID: 348000691}
   - {fileID: 1388975298}
   m_Father: {fileID: 1748482893}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
