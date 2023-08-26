@@ -10,7 +10,7 @@ namespace YoutubeRequestSystem
         #region INSPECTOR PROPERTIES
 
         [SerializeField] private YoutubeSearchRequestChannel youtubeSearchRequestChannel;
-
+        [SerializeField] private phoneController _phoneController;
         //
         public GameObject songCardPrefab;
         public GameObject songLayoutGroup;
@@ -20,6 +20,10 @@ namespace YoutubeRequestSystem
         #region UNITY METHODS
 
         private void Start() {
+            if (_phoneController == null)
+            {
+                _phoneController = GameObject.FindGameObjectWithTag("phoneController").GetComponent<phoneController>();
+            }
         }
 
         private void OnEnable()
@@ -60,6 +64,15 @@ namespace YoutubeRequestSystem
                 songCard.GetComponent<songCardScript>().songName.text = item.snippet.title;
                 songCard.GetComponent<songCardScript>().songID = item.id.videoId;
                 songCard.GetComponent<songCardScript>().imageURL = item.snippet.thumbnails.@default.url;
+            }
+
+            if(result.items.Count == 0)
+            {
+                _phoneController.noResultText.SetActive(true);
+            }
+            else if (result.items.Count > 0)
+            {
+                _phoneController.noResultText.SetActive(false);
             }
         }
 

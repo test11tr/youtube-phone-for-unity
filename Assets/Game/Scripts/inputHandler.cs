@@ -12,8 +12,11 @@ namespace test11
 
         [SerializeField] private EventSystem system;
         [SerializeField] private phoneController _phoneController;
-        [SerializeField] private GameObject _mainPage;
+        [SerializeField] private GameObject _searchResultPageBackButton;
+        [SerializeField] private GameObject _playSongPageBackButton;
+        [SerializeField] private GameObject _loadingPageBackButton;
         [SerializeField] private GameObject _searchButton;
+        [SerializeField] private TMP_InputField _searchField;
         bool allow = true;
 
        void OnEnable()
@@ -48,6 +51,35 @@ namespace test11
                     }
                 }
             }
+
+            if (Input.GetKeyUp(KeyCode.Backspace))
+            {
+                if (_searchResultPageBackButton.activeSelf)
+                {
+                    _searchResultPageBackButton.GetComponent<Button>().onClick.Invoke();
+                }
+                else if (_playSongPageBackButton.activeSelf)
+                {
+                   _playSongPageBackButton.GetComponent<Button>().onClick.Invoke();
+                }
+                else if (_loadingPageBackButton.activeSelf)
+                {
+                    _loadingPageBackButton.GetComponent<Button>().onClick.Invoke();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                if (_searchField.gameObject.activeSelf)
+                {
+                    _searchField.ActivateInputField();
+                }
+            }
+
         }
 
         public void Search(){

@@ -17,6 +17,7 @@ namespace test11
         public GameObject songPlayerParent;
         public GameObject songPlayerPage;
         public GameObject songLoadingScreen;
+        public GameObject noResultText;
 
         void Start()
         {
@@ -36,11 +37,31 @@ namespace test11
         {
             if ((Input.GetKeyDown(KeyCode.UpArrow)))
             {
-                if(_phoneAnimator.GetBool("isClosed") == true){
-                    _phoneAnimator.SetBool("isClosed", false);
-                }else{
-                    _phoneAnimator.SetBool("isClosed", true);
-                }
+                HandlePhone();
+            }
+            if ((Input.GetKeyDown(KeyCode.Escape)))
+            {
+                ClosePhone();
+            }
+        }
+
+        public void HandlePhone()
+        {
+            if (_phoneAnimator.GetBool("isClosed") == true)
+            {
+                _phoneAnimator.SetBool("isClosed", false);
+            }
+            else
+            {
+                _phoneAnimator.SetBool("isClosed", true);
+            }
+        }
+
+        public void ClosePhone()
+        {
+            if (_phoneAnimator.GetBool("isClosed") == false)
+            {
+                _phoneAnimator.SetBool("isClosed", true);
             }
         }
 
