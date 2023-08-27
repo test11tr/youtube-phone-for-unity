@@ -1,16 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace test11.EndlessRoadSystem
 {
     public class RoadPiece : MonoBehaviour
     {
+        #region INSPECTOR PROPERTIES
 
-        public Vector3 StartOffsetPoint{get{return startOffsetPoint;} }
-        
-        private Vector3 startOffsetPoint;
-        private Vector3 endOffsetPoint;
-        
+        [SerializeField] private GameObject roadPrefab;
+
+        [SerializeField] private Vector3 startOffset;
+        [SerializeField] private Vector3 endOffset;
+
+        #endregion
+
+        #region PUBLIC PROPERTIES
+
+        public Vector3 StartOffset
+        {
+            get { return startOffset; }
+        }
+
+        public Vector3 EndOffset
+        {
+            get { return endOffset; }
+        }
+
+        #endregion
     }
 }
