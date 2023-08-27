@@ -18,6 +18,7 @@ namespace test11
         public string imageURL;
         public GameObject songPlayCardPrefab;
         [SerializeField] private phoneController _phoneController;
+        public GameObject cardselection;
 
         void Start()
         {
@@ -76,6 +77,7 @@ namespace test11
             songPlayCard.GetComponent<songPlayerScript>().songName.text = songName.text;
             songPlayCard.GetComponent<songPlayerScript>().songID = songID;
             _phoneController.songPlayerPage.SetActive(true);
+            _phoneController.setCurrentPage(2);
         }
     }
 }

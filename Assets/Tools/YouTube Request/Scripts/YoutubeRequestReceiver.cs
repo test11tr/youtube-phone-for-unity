@@ -59,7 +59,8 @@ namespace YoutubeRequestSystem
                 Debug.Log("Published At: " + item.snippet.publishedAt);
                 Debug.Log("Description: " + item.snippet.description);
                 Debug.Log("Thumbnail URL: " + item.snippet.thumbnails.@default.url);
-
+                Debug.Log("Thumbnail URL: " + item.snippet.thumbnails.@default.url);
+ 
                 GameObject songCard = Instantiate(songCardPrefab, songLayoutGroup.transform.position, Quaternion.identity, songLayoutGroup.transform);
                 songCard.GetComponent<songCardScript>().songName.text = item.snippet.title;
                 songCard.GetComponent<songCardScript>().songID = item.id.videoId;
@@ -73,6 +74,12 @@ namespace YoutubeRequestSystem
             else if (result.items.Count > 0)
             {
                 _phoneController.noResultText.SetActive(false);
+            }
+
+            if (_phoneController.searchResultGroupParent.transform.childCount > 0)
+            {
+                _phoneController.searchResultGroupParent.transform.GetChild(1).gameObject.GetComponent<songCardScript>().cardselection.SetActive(false);
+                _phoneController.searchResultGroupParent.transform.GetChild(2).gameObject.GetComponent<songCardScript>().cardselection.SetActive(false);
             }
         }
 

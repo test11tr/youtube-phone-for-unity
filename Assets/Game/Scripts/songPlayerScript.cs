@@ -43,6 +43,7 @@ namespace test11
             await _ytPlayer.PrepareVideoAsync();
             Debug.Log("Video ready");
             _phoneController.songLoadingScreen.SetActive(false);
+            _phoneController.setCurrentPage(3);
         }
 
         [Obsolete]

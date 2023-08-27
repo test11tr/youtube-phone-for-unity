@@ -14,13 +14,17 @@ namespace test11
         [SerializeField] private YoutubeRequestReceiver _ytRequestReciever;
         [SerializeField] private YoutubeSearchRequestChannel _ytSearchRequestChannel;
         [SerializeField] private TMPro.TMP_InputField _searchField;
+        public GameObject searchResultGroupParent;
         public GameObject songPlayerParent;
         public GameObject songPlayerPage;
         public GameObject songLoadingScreen;
         public GameObject noResultText;
+        public int currentPage; //0 = main 1= search 2= loading 3= playCard
+ 
 
         void Start()
         {
+            currentPage = 0;
             if(_phoneAnimator == null){
                 _phoneAnimator = GetComponent<Animator>();
             }
@@ -50,10 +54,6 @@ namespace test11
             if (_phoneAnimator.GetBool("isClosed") == true)
             {
                 _phoneAnimator.SetBool("isClosed", false);
-            }
-            else
-            {
-                _phoneAnimator.SetBool("isClosed", true);
             }
         }
 
@@ -87,6 +87,11 @@ namespace test11
                     Destroy(target.transform.GetChild(i).gameObject);
                 }
             }
+        }
+
+        public void setCurrentPage(int page)
+        {
+            currentPage = page;
         }
     }
 }
