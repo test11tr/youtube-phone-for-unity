@@ -9,29 +9,46 @@ namespace test11.EndlessRoadSystem
     {
         #region INSPECTOR PROPERTIES
 
-        [SerializeField] private SplineComputer roadSpline;
-        [SerializeField] private PathGenerator pathGenerator;
-
-        [SerializeField] private Vector3 splineVector;
-        [SerializeField] private float splineStartAngle;
-        [SerializeField] private float splineEndAngle;
-
-        [SerializeField] private float yaw;
-        [SerializeField] private float pitch;
-        [SerializeField] private float roll;
+        [SerializeField] private RoadEntity road;
+        // [SerializeField] private Vector3 splineVector;
+        // [SerializeField] private float splineStartAngle;
+        // [SerializeField] private float splineEndAngle;
+        //
+        // [SerializeField] private float yaw;
+        // [SerializeField] private float pitch;
+        // [SerializeField] private float roll;
 
         #endregion
 
         #region PRIVATE PROPERTIES
 
+        private Vector3 startPosition;
+        private Vector3 endPosition;
+
+        private Vector3 startRotationEuler;
+        private Vector3 endRotationEuler;
+
+        private Quaternion startRotation;
+        private Quaternion endRotation;
+
+        #endregion
+
+        #region PUBLIC PROPERTIES
+
+        public Vector3 StartPosition => startPosition;
+        public Vector3 EndPosition => endPosition;
+        public Vector3 StartRotationEuler => startRotationEuler;
+        public Vector3 EndRotationEuler => endRotationEuler;
+        public Quaternion StartRotation => startRotation;
+        public Quaternion EndRotation => endRotation;
+
         #endregion
 
         #region UNITY METHODS
 
-
-
         private void Start()
         {
+            GetStartEndPointProperties();
         }
 
         #endregion
@@ -39,45 +56,58 @@ namespace test11.EndlessRoadSystem
         #region PRIVATE METHODS
 
         [Button]
-        private void GetStartEndPointAngles()
+        private void GetStartEndPointProperties()
         {
-            int splinePointCount = roadSpline.pointCount;
-            SplinePoint firstPoint = roadSpline.GetPoint(0);
-            SplinePoint lastPoint = roadSpline.GetPoint(splinePointCount - 1);
+            int splinePointCount = road.Spline.pointCount;
+            SplinePoint firstPoint = road.Spline.GetPoint(0);
+            SplinePoint lastPoint = road.Spline.GetPoint(splinePointCount - 1);
 
             Vector3 splineStartTangent = firstPoint.tangent;
             Vector3 splineStartTangent2 = firstPoint.tangent2;
             Vector3 splineEndTangent = lastPoint.tangent;
             Vector3 splineEndTangent2 = lastPoint.tangent2;
+            
+
 
 
             // Calculate the start angle based on the first tangent points
-            Quaternion startRotation =
+            Quaternion startRot =
                 Quaternion.LookRotation(splineStartTangent.normalized, splineStartTangent2.normalized);
-            Vector3 startEulerAngles = startRotation.eulerAngles;
+            Vector3 startEuler = startRot.eulerAngles;
 
             // Calculate the end angle based on the last tangent points
-            Quaternion endRotation = Quaternion.LookRotation(splineEndTangent.normalized, splineEndTangent2.normalized);
-            Vector3 endEulerAngles = endRotation.eulerAngles;
+            Quaternion endRot = Quaternion.LookRotation(splineEndTangent.normalized, splineEndTangent2.normalized);
+            Vector3 endEuler = endRot.eulerAngles;
 
             // Display Euler angles in the debug log
-            Debug.Log("Start Euler Angles: " + startEulerAngles);
-            Debug.Log("End Euler Angles: " + endEulerAngles);
+            Debug.Log("Start Euler Angles: " + startEuler);
+            Debug.Log("End Euler Angles: " + endEuler);
+
+            // this.startRotation = startRotation;
+            startRotationEuler = startEuler;
+            endRotationEuler = endEuler;
+            startRotation = startRot;
+            endRotation = endRot;
+
+            Vector3 position = transform.position;
+
+            startPosition = firstPoint.position;
+            endPosition = lastPoint.position ;
         }
 
-        [Button]
-        private void SetStartAngle(float yaw, float pitch, float roll)
-        {
-            SplinePoint startSplinePoint = roadSpline.GetPoint(0);
-
-            TangentUtils.TangentsFromEulerAngles(yaw, pitch, roll, out Vector3 tangent, out Vector3 tangent2);
-            
-            SplinePoint newPoint = new SplinePoint(startSplinePoint.position, tangent, tangent2, startSplinePoint.size, startSplinePoint.color);
-            
-            roadSpline.SetPoint(0, newPoint); // Set the updated SplinePoint back to the spline
-
-            // Debug.Log("new angles: " + startSplinePoint.tangent + " " + startSplinePoint.tangent2);
-        }
+        // [Button]
+        // private void SetStartAngle(float yaw, float pitch, float roll)
+        // {
+        //     SplinePoint startSplinePoint = road.Spline.GetPoint(0);
+        //
+        //     TangentUtils.TangentsFromEulerAngles(yaw, pitch, roll, out Vector3 tangent, out Vector3 tangent2);
+        //     
+        //     SplinePoint newPoint = new SplinePoint(startSplinePoint.position, tangent, tangent2, startSplinePoint.size, startSplinePoint.color);
+        //     
+        //     road.Spline.SetPoint(0, newPoint); // Set the updated SplinePoint back to the spline
+        //
+        //     // Debug.Log("new angles: " + startSplinePoint.tangent + " " + startSplinePoint.tangent2);
+        // }
 
         #endregion
 
