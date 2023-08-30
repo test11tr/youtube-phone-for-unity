@@ -15,11 +15,10 @@ namespace test11.EndlessRoadSystem
 
         #region PRIVATE PROPERTIES
 
-        [SerializeField]private List<RoadEntity> roadPiecesList = new List<RoadEntity>();
+        [SerializeField] private List<RoadEntity> roadPiecesList = new List<RoadEntity>();
 
-        [SerializeField]private Vector3 currentEndPoint;
+        [SerializeField] private Vector3 currentEndPoint;
         [SerializeField] private Vector3 currentEndRotationEuler;
-        private int roadPieceIndex = 0;
 
         #endregion
 
@@ -28,14 +27,12 @@ namespace test11.EndlessRoadSystem
         private void Start()
         {
             currentEndPoint = Vector3.zero;
-            roadPieceIndex = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                CreateRoadPiece();
-            }
+
+            // for (int i = 0; i < 5; i++)
+            // {
+            //     CreateRoadPiece();
+            // }
         }
-
-
 
         #endregion
 
@@ -48,9 +45,12 @@ namespace test11.EndlessRoadSystem
             int randomRoadPieceIndex = Random.Range(0, roadPieces.Length);
             RoadEntity roadPiece = Instantiate(roadPieces[randomRoadPieceIndex], transform);
             roadPiecesList.Add(roadPiece);
-            StartCoroutine(Co_PositionRoadPiece(roadPiece));
+            roadPiece.transform.position = currentEndPoint;
 
-
+            roadPiece.transform.rotation = Quaternion.Euler(currentEndRotationEuler);
+            currentEndPoint = new Vector3(roadPiece.EndPosition.x, 0, roadPiece.EndPosition.z);
+            currentEndRotationEuler = new Vector3(0, 180-roadPiece.EndRotationEuler.y, 0);
+            roadPiece.RebuildRoad();
         }
 
         [Button]
@@ -60,7 +60,6 @@ namespace test11.EndlessRoadSystem
             roadPiecesList.Remove(roadPiece);
             DestroyImmediate(roadPiece.gameObject);
             currentEndPoint -= roadPiece.EndPosition;
-            // currentPiecePoint--;
         }
 
         [Button]
@@ -70,25 +69,18 @@ namespace test11.EndlessRoadSystem
             roadPiecesList.Remove(roadPiece);
             DestroyImmediate(roadPiece.gameObject);
             currentEndPoint -= roadPiece.EndPosition;
-            // currentPiecePoint--;
-            
         }
-        
-        private IEnumerator Co_PositionRoadPiece(RoadEntity roadPiece)
-        {
-            yield return null;
-            roadPiece.transform.position = currentEndPoint;
-            
-            // roadPiece.transform.rotation = Quaternion.Euler(currentEndRotationEuler);
-            currentEndPoint += new Vector3(roadPiece.EndPosition.x, 0, roadPiece.EndPosition.z);
-            currentEndRotationEuler -= new Vector3(0, roadPiece.EndRotationEuler.y, 0);
-            
-            Debug.Log("road piece end position: "+roadPiece.EndPosition);
-            
-            // randomize road piece index
-            roadPieceIndex = Random.Range(0, roadPieces.Length);
-            // currentPiecePoint++;
-        }
+
+        // private IEnumerator Co_PositionRoadPiece(RoadEntity roadPiece)
+        // {
+        //     yield return null;
+        //     roadPiece.transform.position = currentEndPoint;
+        //
+        //     roadPiece.transform.rotation = Quaternion.Euler(currentEndRotationEuler);
+        //     currentEndPoint += new Vector3(roadPiece.EndPosition.x, 0, roadPiece.EndPosition.z);
+        //     currentEndRotationEuler += new Vector3(0, roadPiece.EndRotationEuler.y - 180, 0);
+        //     Debug.Log(currentEndPoint);
+        // }
 
         #endregion
     }

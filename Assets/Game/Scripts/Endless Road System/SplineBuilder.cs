@@ -22,34 +22,45 @@ namespace test11.EndlessRoadSystem
 
         #region PRIVATE PROPERTIES
 
-        private Vector3 startPosition;
-        private Vector3 endPosition;
-
-        private Vector3 startRotationEuler;
-        private Vector3 endRotationEuler;
-
-        private Quaternion startRotation;
-        private Quaternion endRotation;
-
         #endregion
 
         #region PUBLIC PROPERTIES
 
-        public Vector3 StartPosition => startPosition;
-        public Vector3 EndPosition => endPosition;
-        public Vector3 StartRotationEuler => startRotationEuler;
-        public Vector3 EndRotationEuler => endRotationEuler;
-        public Quaternion StartRotation => startRotation;
-        public Quaternion EndRotation => endRotation;
+        public Vector3 StartPosition => road.Spline.GetPoint(0).position;
+
+        public Vector3 EndPosition => road.Spline.GetPoint(road.Spline.pointCount - 1).position;
+        public Vector3 StartRotationEuler => StartRotation.eulerAngles;
+        public Vector3 EndRotationEuler => EndRotation.eulerAngles;
+
+        public Quaternion StartRotation
+        {
+            get
+            {
+                SplinePoint firstPoint = road.Spline.GetPoint(0);
+                Vector3 splineStartTangent = firstPoint.tangent;
+                Vector3 splineStartTangent2 = firstPoint.tangent2;
+
+                return Quaternion.LookRotation(splineStartTangent.normalized, splineStartTangent2.normalized);
+            }
+        }
+
+        public Quaternion EndRotation
+        {
+            get
+            {
+                SplinePoint lastPoint = road.Spline.GetPoint(road.Spline.pointCount - 1);
+                Vector3 splineEndTangent = lastPoint.tangent;
+                Vector3 splineEndTangent2 = lastPoint.tangent2;
+
+                return Quaternion.LookRotation(splineEndTangent.normalized, splineEndTangent2.normalized);
+            }
+        }
 
         #endregion
 
         #region UNITY METHODS
 
-        private void Start()
-        {
-            GetStartEndPointProperties();
-        }
+
 
         #endregion
 
@@ -66,8 +77,6 @@ namespace test11.EndlessRoadSystem
             Vector3 splineStartTangent2 = firstPoint.tangent2;
             Vector3 splineEndTangent = lastPoint.tangent;
             Vector3 splineEndTangent2 = lastPoint.tangent2;
-            
-
 
 
             // Calculate the start angle based on the first tangent points
@@ -82,17 +91,6 @@ namespace test11.EndlessRoadSystem
             // Display Euler angles in the debug log
             Debug.Log("Start Euler Angles: " + startEuler);
             Debug.Log("End Euler Angles: " + endEuler);
-
-            // this.startRotation = startRotation;
-            startRotationEuler = startEuler;
-            endRotationEuler = endEuler;
-            startRotation = startRot;
-            endRotation = endRot;
-
-            Vector3 position = transform.position;
-
-            startPosition = firstPoint.position;
-            endPosition = lastPoint.position ;
         }
 
         // [Button]

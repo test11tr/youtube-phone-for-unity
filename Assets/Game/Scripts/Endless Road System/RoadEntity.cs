@@ -25,9 +25,19 @@ namespace test11.EndlessRoadSystem
         
         public Vector3 StartRotationEuler => splineBuilder.StartRotationEuler;
         public Vector3 EndRotationEuler => splineBuilder.EndRotationEuler;
-        
-        
 
+
+
+        #endregion
+        
+        #region PUBLIC METHODS
+        
+        public void RebuildRoad()
+        {
+            path.RebuildImmediate();
+            spline.RebuildImmediate();
+        }
+        
         #endregion
     }
 }
