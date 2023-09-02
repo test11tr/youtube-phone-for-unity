@@ -512,6 +512,7 @@ MonoBehaviour:
   spline: {fileID: 3045656652865148436}
   path: {fileID: 5761238996848655627}
   splineBuilder: {fileID: 5761238996462163113}
+  endRotationEulerY: 8.7
 --- !u!114 &5761238996462163113
 MonoBehaviour:
   m_ObjectHideFlags: 0

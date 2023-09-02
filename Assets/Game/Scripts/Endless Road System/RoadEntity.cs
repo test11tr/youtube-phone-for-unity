@@ -10,6 +10,8 @@ namespace test11.EndlessRoadSystem
         [SerializeField] private SplineComputer spline;
         [SerializeField] private PathGenerator path;
         [SerializeField] private SplineBuilder splineBuilder;
+        
+        [SerializeField] private float endRotationEulerY;
 
         #endregion
 
@@ -24,7 +26,7 @@ namespace test11.EndlessRoadSystem
         public Quaternion EndRotation => splineBuilder.EndRotation;
         
         public Vector3 StartRotationEuler => splineBuilder.StartRotationEuler;
-        public Vector3 EndRotationEuler => splineBuilder.EndRotationEuler;
+        public Vector3 EndRotationEuler => new Vector3(0, endRotationEulerY, 0);
 
 
 

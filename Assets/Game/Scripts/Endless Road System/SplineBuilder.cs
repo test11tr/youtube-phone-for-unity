@@ -29,8 +29,44 @@ namespace test11.EndlessRoadSystem
         public Vector3 StartPosition => road.Spline.GetPoint(0).position;
 
         public Vector3 EndPosition => road.Spline.GetPoint(road.Spline.pointCount - 1).position;
-        public Vector3 StartRotationEuler => StartRotation.eulerAngles;
-        public Vector3 EndRotationEuler => EndRotation.eulerAngles;
+        // public Vector3 StartRotationEuler => StartRotation.eulerAngles;
+
+        // public Vector3 EndRotationEuler => EndRotation.eulerAngles;
+        public Vector3 StartRotationEuler
+        {
+            get
+            {
+                SplinePoint firstPoint = road.Spline.GetPoint(0);
+                Vector3 splineStartTangent = firstPoint.tangent;
+
+                
+                
+                
+                
+                Quaternion rotationQuaternion = Quaternion.LookRotation(splineStartTangent.normalized);
+                return rotationQuaternion.eulerAngles;
+            }
+        }
+
+        public Vector3 EndRotationEuler
+        {
+            get
+            {
+                SplinePoint lastPoint = road.Spline.GetPoint(road.Spline.pointCount - 1);
+                Vector3 splineEndTangent = lastPoint.tangent;
+
+                Quaternion rotationQuaternion = Quaternion.LookRotation(splineEndTangent.normalized);
+                
+                
+                
+                
+                float angleFromTangent = Vector3.Angle(Vector3.up, splineEndTangent);
+                
+                return new Vector3(0, 180-angleFromTangent, 0);
+                // return rotationQuaternion.eulerAngles;
+            }
+            
+        }
 
         public Quaternion StartRotation
         {

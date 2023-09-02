@@ -99,12 +99,12 @@ MonoBehaviour:
       tangent: {x: 1.9850347, y: 0, z: -12.767516}
       tangent2: {x: 2.708368, y: 0, z: -15.224889}
     - _type: 0
-      position: {x: 4.6, y: 0, z: -18.87}
+      position: {x: 7.1, y: 0, z: -18.87}
       color: {r: 1, g: 1, b: 1, a: 1}
       normal: {x: 0, y: 1, z: 0}
       size: 1
-      tangent: {x: 3.8489003, y: 0, z: -17.245401}
-      tangent2: {x: 5.3510995, y: 0, z: -20.4946}
+      tangent: {x: 3.9499998, y: 0, z: -18.72}
+      tangent2: {x: 10.25, y: 0, z: -19.020002}
     type: 2
     linearAverageDirection: 1
     customValueInterpolation:
@@ -407,57 +407,57 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.8333333333333334
-  - position: {x: 2.494501, y: 0, z: -14.433461}
+  - position: {x: 2.5012589, y: 0, z: -14.482007}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.35058028, y: 0, z: -0.9365327}
+    forward: {x: 0.3241816, y: 0, z: -0.94599485}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.8518518518518519
-  - position: {x: 2.6903794, y: 0, z: -14.9196005}
+  - position: {x: 2.7294633, y: 0, z: -15.089513}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.3928311, y: 0, z: -0.9196106}
+    forward: {x: 0.37951884, y: 0, z: -0.925184}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.8703703703703703
-  - position: {x: 2.9247193, y: 0, z: -15.4448395}
+  - position: {x: 3.0397787, y: 0, z: -15.772528}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.4196496, y: 0, z: -0.9076862}
+    forward: {x: 0.44873703, y: 0, z: -0.8936638}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.8888888888888888
-  - position: {x: 3.187907, y: 0, z: -15.99941}
+  - position: {x: 3.4406695, y: 0, z: -16.484873}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.43626678, y: 0, z: -0.8998174}
+    forward: {x: 0.5336199, y: 0, z: -0.8457244}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.9074074074074074
-  - position: {x: 3.4703257, y: 0, z: -16.573526}
+  - position: {x: 3.9405997, y: 0, z: -17.180357}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.44537583, y: 0, z: -0.8953437}
+    forward: {x: 0.6351173, y: 0, z: -0.77241564}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.9259259259259259
-  - position: {x: 3.76236, y: 0, z: -17.157421}
+  - position: {x: 4.5480337, y: 0, z: -17.812798}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.44828206, y: 0, z: -0.89389217}
+    forward: {x: 0.75004256, y: 0, z: -0.6613896}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.9444444444444444
-  - position: {x: 4.054394, y: 0, z: -17.741314}
+  - position: {x: 5.2714357, y: 0, z: -18.33601}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.44537607, y: 0, z: -0.8953436}
+    forward: {x: 0.8658156, y: 0, z: -0.5003633}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.9629629629629629
-  - position: {x: 4.3368125, y: 0, z: -18.315434}
+  - position: {x: 6.1192694, y: 0, z: -18.703804}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.43626684, y: 0, z: -0.89981735}
+    forward: {x: 0.95758593, y: 0, z: -0.288148}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0.9814814814814815
-  - position: {x: 4.6, y: 0, z: -18.87}
+  - position: {x: 7.1, y: 0, z: -18.87}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.41964957, y: 0, z: -0.90768623}
+    forward: {x: 0.99886805, y: 0, z: -0.047565628}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 1
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 5761238996462163115}
   - component: {fileID: 5761238996462163113}
   m_Layer: 0
-  m_Name: Spline Road 1
+  m_Name: Spline Road 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,6 +512,7 @@ MonoBehaviour:
   spline: {fileID: 3045656652865148436}
   path: {fileID: 5761238996848655627}
   splineBuilder: {fileID: 5761238996462163113}
+  endRotationEulerY: -87.181
 --- !u!114 &5761238996462163113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,9 +681,9 @@ MonoBehaviour:
     size: 1
     percent: 0
   _clipToSample:
-    position: {x: 4.6, y: 0, z: -18.87}
+    position: {x: 7.1, y: 0, z: -18.87}
     up: {x: 0, y: 1, z: 0}
-    forward: {x: 0.41964957, y: 0, z: -0.90768623}
+    forward: {x: 0.99886805, y: 0, z: -0.047565628}
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 1

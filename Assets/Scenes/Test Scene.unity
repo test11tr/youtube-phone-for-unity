@@ -388,40 +388,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Endless Road System
       objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[3]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[4]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 882944380771348169, guid: 17d2790d685e72c42bf8ab4a1ef5f414,
-        type: 3}
-      propertyPath: roadPiecesList.Array.data[5]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17d2790d685e72c42bf8ab4a1ef5f414, type: 3}

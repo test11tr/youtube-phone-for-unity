@@ -79,6 +79,7 @@ MonoBehaviour:
   roadPieces:
   - {fileID: 5761238996462163115, guid: 09d3bdde27668124fa99045b16cc46f9, type: 3}
   - {fileID: 5761238996462163115, guid: 34557033ef473b8409364b6be4627197, type: 3}
+  - {fileID: 5761238996462163115, guid: 16b23f88c3caa3a479934223bd6847d5, type: 3}
   roadPiecesList: []
   currentEndPoint: {x: 0, y: 0, z: 0}
   currentEndRotationEuler: {x: 0, y: 0, z: 0}

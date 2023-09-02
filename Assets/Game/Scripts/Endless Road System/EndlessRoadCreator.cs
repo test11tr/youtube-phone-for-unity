@@ -49,7 +49,10 @@ namespace test11.EndlessRoadSystem
 
             roadPiece.transform.rotation = Quaternion.Euler(currentEndRotationEuler);
             currentEndPoint = new Vector3(roadPiece.EndPosition.x, 0, roadPiece.EndPosition.z);
-            currentEndRotationEuler = new Vector3(0, 180-roadPiece.EndRotationEuler.y, 0);
+            
+
+            currentEndRotationEuler += new Vector3(0, roadPiece.EndRotationEuler.y, 0);
+            Debug.Log("new end rotation euler: "+currentEndRotationEuler);
             roadPiece.RebuildRoad();
         }
 
@@ -82,6 +85,11 @@ namespace test11.EndlessRoadSystem
         //     Debug.Log(currentEndPoint);
         // }
 
+        private void AssignRandomRoadPiece(float currentAngle)
+        {
+            
+        }
+        
         #endregion
     }
 }
